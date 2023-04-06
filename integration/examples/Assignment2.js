@@ -17,19 +17,27 @@ describe('Registration', function()
           //  ru.homepageVisible()
             signup.clickloignButton()
             //ru.verifynewusersignupisVisible()
+            //let abv = accountinfo.enterName('Sanwan')
             accountinfo.enterName('Sanwan')
-            const abv=
-            accountinfo.enterEmail('akopomki@gmail.com')
-            accountinfo.clicksignupButton()
-            accountinfo.checkTitle()
-            accountinfo.enterPassword('78669')
-            accountinfo.enterdateofBirth('4','May','1999')
-            accountinfo.checkBox()
-            addressinfo.addressInfo('Sanwan','Aslam','Devsinc','Opposite KFC','Opposite SCB','Singapore','Dont Know','Lahore','3000','034904903499')
-            addressinfo.createAccountButton()
-            accountcreated.checkAccountCreated
-            accountcreated.continueButton()
-            register.loggedinasusernameVisibility()
+
+            cy.get('[data-qa="signup-name"]').then(($nam) =>{
+                cy.log($nam)
+                return this
+              })
+            //const abv1 = abv;
+            // accountinfo.enterEmail('akopomtuhuhreeki@yopmail.com')
+            // accountinfo.clicksignupButton()
+            // accountinfo.checkTitle()
+            // accountinfo.enterPassword('78669')
+            // accountinfo.enterdateofBirth('4','May','1999')
+            // accountinfo.checkBox()
+            // addressinfo.addressInfo('Sanwan','Aslam','Devsinc','Opposite KFC','Opposite SCB','Singapore','Dont Know','Lahore','3000','034904903499')
+            // addressinfo.createAccountButton()
+            // accountcreated.checkAccountCreated
+            // accountcreated.continueButton()
+            // register.loggedinasusernameVisibility()
+            // accountcreated.deleteAccount()
+            // accountcreated.continueButton()
         })
     
     
